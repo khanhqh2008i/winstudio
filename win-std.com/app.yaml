@@ -1,0 +1,29 @@
+runtime: php74
+
+handlers:
+  - url: /app-ads\.txt
+    static_files: public/app-ads.txt
+    upload: public/app-ads\.txt
+
+  - url: /privacy\.html
+    static_files: privacy.html
+    upload: privacy\.html
+
+  - url: /index\.html
+    static_files: index.html
+    upload: index\.html
+
+  - url: /public
+    static_dir: public
+
+  - url: /dist
+    static_dir: dist
+
+  - url: /src
+    static_dir: src
+
+
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
